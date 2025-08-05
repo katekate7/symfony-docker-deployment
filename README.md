@@ -10,14 +10,13 @@ Pour reproduire ce déploiement dans votre projet Symfony :
 
 4. Créer une image de votre projet
 ```bash
-docker build . -t symfony-deployment-example
+docker build . -t <nom_utilisateur_dockerhub>/symfony-deployment
 ```
 
 5. Héberger l'image sur dockerhub
 ```bash
 docker login
-docker tag symfony-deployment-example <nom_utilisateur_dockerhub>/symfony-deployment-example
-docker push <nom_utilisateur_dockerhub>/symfony-deployment-example
+docker push <nom_utilisateur_dockerhub>/symfony-deployment
 ```
 
 Adapter le projet avec votre version de PHP
