@@ -1,14 +1,12 @@
 services:
   app:
-    container_name: my_app_container
-    build:
-      context: .
-      dockerfile: Dockerfile
+    container_name: symfony-deployment-example
+    image: fredericbui/symfony_deployment
     ports:
       - "8089:80"
   db:
     image: mysql:8.0
-    container_name: my_db_container
+    container_name: symfony_db_container
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: app
