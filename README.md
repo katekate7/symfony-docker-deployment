@@ -24,6 +24,8 @@ docker push <nom_utilisateur_dockerhub>/symfony-deployment-example
 
 6. Se connecter au serveur distant et déployer le projet
 ```bash
+ssh <utilisateur>@<IP_adresse>
+curl https://raw.githubusercontent.com/fredericBui/symfony-docker-deployment/refs/heads/main/compose.yaml -o compose.yaml
 docker compose up
 ```
 
