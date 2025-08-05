@@ -21,6 +21,7 @@ docker push <nom_utilisateur_dockerhub>/symfony-deployment-example
 ```
 
 Adapter le projet avec votre version de PHP
+Changer l'adresse IP de la base de données
 
 Projet minimum avec :
 - User entity
