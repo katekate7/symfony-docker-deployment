@@ -1,0 +1,20 @@
+services:
+  app:
+    container_name: my_app_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8089:80"
+  db:
+    image: mysql:8.0
+    container_name: my_db_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
