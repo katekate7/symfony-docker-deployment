@@ -1,10 +1,8 @@
 Symfony Docker deployment exemple
 
 Pour reproduire ce déploiement dans votre projet Symfony :
-1. Créer un dossier docker avec les fichiers suivant :
-
+1. Créer un dossier docker avec le fichier suivant :
 - apache.conf
-- entrypoint.sh
 
 2. Créer un fichier Dockerfile
 
@@ -21,3 +19,9 @@ docker login
 docker tag symfony-deployment-example <nom_utilisateur_dockerhub>/symfony-deployment-example
 docker push <nom_utilisateur_dockerhub>/symfony-deployment-example
 ```
+
+Adapter le projet avec votre version de PHP
+
+Projet minimum avec :
+- User entity
+- Register & login

@@ -27,20 +27,11 @@ RUN wget https://getcomposer.org/download/2.0.9/composer.phar \
 # Copie la configuration Apache personnalisée (VirtualHost, DocumentRoot, etc.)
 COPY docker/apache.conf /etc/apache2/sites-enabled/000-default.conf
 
-# Copie le script d'entrée qui sera exécuté à chaque démarrage du conteneur
-COPY docker/entrypoint.sh /entrypoint.sh
-
 # Copie tous les fichiers de l'application dans le dossier /var/www (racine du site)
 COPY . /var/www
 
 # Définit le répertoire de travail à /var/www pour les prochaines instructions
 WORKDIR /var/www
 
-# Rend le script d'entrée exécutable
-RUN chmod +x /entrypoint.sh
-
 # Commande par défaut : démarre Apache en mode "foreground" pour que Docker garde le conteneur actif
 CMD ["apache2-foreground"]
-
-# Définit le script d'entrée à exécuter au lancement du conteneur (avant la commande CMD)
-ENTRYPOINT ["/entrypoint.sh"]
