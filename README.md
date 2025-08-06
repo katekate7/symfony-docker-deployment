@@ -6,8 +6,6 @@ Pour reproduire ce déploiement dans votre projet Symfony :
 
 2. Créer un fichier Dockerfile
 
-3. Créer un fichier compose.yaml
-
 4. Créer une image de votre projet
 ```bash
 docker build . -t <nom_utilisateur_dockerhub>/symfony-deployment
